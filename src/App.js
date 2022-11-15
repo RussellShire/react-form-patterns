@@ -1,9 +1,10 @@
 import './App.css';
+import Checklist from './components/Checklist';
 
 function App() {
   return (
     <div className="App">
-      <h1>test</h1>
+      <Checklist />
     </div>
   );
 }
