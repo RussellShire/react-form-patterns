@@ -7,8 +7,8 @@ function ObjectForm() {
     const handleChange = ({ target }) => {
       const { name, value } = target;
       
-      //Callback function and spread syntax '...' to update state
-      setFormState((prev) => ({
+      
+      setFormState((prev) => ({ //Callback function and spread syntax '...' to update state without overwriting previous
         ...prev,
         [name]: value // Square brackets here are important for allowing a dynamic property name (Computed Property Name)
       }));
@@ -23,7 +23,7 @@ function ObjectForm() {
       <div>
         <h1>State Object Form</h1>
         <p>Form that updates an object in state with a reusuable handleChange</p>
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 value={formState.firstName}
                 onChange={handleChange}
@@ -36,7 +36,7 @@ function ObjectForm() {
                 name='surname'
                 type='text'
             />
-            <button type="submit" onClick={handleSubmit}>Submit</button>
+            <button type="submit" >Submit</button>
         </form>
         <div>
             <h2>Object output:</h2> 
