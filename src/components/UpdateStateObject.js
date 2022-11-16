@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 function ObjectForm() {
     const [formState, setFormState] = useState({});
    
-    // Reusable handleChange formula
+    // Reusable handleChange formula, uses the name of an input to update a property in an object with the value of the input
     const handleChange = ({ target }) => {
       const { name, value } = target;
+      
+      //Callback function and spread syntax '...' to update state
       setFormState((prev) => ({
         ...prev,
-        [name]: value
+        [name]: value // Square brackets here are important for allowing a dynamic property name (Computed Property Name)
       }));
     };
    
