@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ItemList({ items, onItemClick }) {
   const handleClick = ({ target }) => {
@@ -15,5 +16,9 @@ function ItemList({ items, onItemClick }) {
     </div>
   );
 }
+
+ItemList.propTypes = {
+    items: PropTypes.array.isRequired
+};
 
 export default ItemList;
