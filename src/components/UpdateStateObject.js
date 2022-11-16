@@ -13,6 +13,11 @@ function ObjectForm() {
         [name]: value // Square brackets here are important for allowing a dynamic property name (Computed Property Name)
       }));
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(JSON.stringify(formState, '', 2)); // alert as placeholder
+      };
    
     return (
       <div>
@@ -31,6 +36,7 @@ function ObjectForm() {
                 name='surname'
                 type='text'
             />
+            <button type="submit" onClick={handleSubmit}>Submit</button>
         </form>
         <div>
             <h2>Object output:</h2> 
