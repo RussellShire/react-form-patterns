@@ -16,7 +16,8 @@ export default function ChosenItems() {
 
   return (
     <div>
-      <h1>Chosen</h1>
+      <h1>Add and Remove List</h1>
+      {selected.length > 0 ? <h1>Chosen</h1> : <></>}
       <ul>
         {selected.map((item, index) => (
           <li onClick={() => removeItem(index)} key={index}>

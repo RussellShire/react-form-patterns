@@ -20,7 +20,7 @@ function Checklist() {
   };
  
   return (
-    <div style={{border: 'solid red', display: 'flex', flexDirection: 'column', alignContent: 'left'}}>
+    <div style={{display: 'flex', flexDirection: 'column', alignContent: 'left'}}>
       <h1>Check list example:</h1>
       {options.map(option => (
         <div style={{display: 'inline-flex'}}>  
